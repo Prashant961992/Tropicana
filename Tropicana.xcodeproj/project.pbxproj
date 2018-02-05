@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8FF5E0A42028563B0045ADB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF5E0A32028563B0045ADB6 /* AppDelegate.swift */; };
+		8FF5E0A62028563B0045ADB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF5E0A52028563B0045ADB6 /* ViewController.swift */; };
+		8FF5E0A92028563B0045ADB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5E0A72028563B0045ADB6 /* Main.storyboard */; };
+		8FF5E0AB2028563B0045ADB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5E0AA2028563B0045ADB6 /* Assets.xcassets */; };
+		8FF5E0AE2028563B0045ADB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5E0AC2028563B0045ADB6 /* LaunchScreen.storyboard */; };
+		8FF5E0B92028563B0045ADB6 /* TropicanaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF5E0B82028563B0045ADB6 /* TropicanaTests.swift */; };
+		8FF5E0C42028563B0045ADB6 /* TropicanaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF5E0C32028563B0045ADB6 /* TropicanaUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8FF5E0B52028563B0045ADB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8FF5E0982028563A0045ADB6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8FF5E09F2028563B0045ADB6;
+			remoteInfo = Tropicana;
+		};
+		8FF5E0C02028563B0045ADB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8FF5E0982028563A0045ADB6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8FF5E09F2028563B0045ADB6;
+			remoteInfo = Tropicana;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8FF5E0A02028563B0045ADB6 /* Tropicana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tropicana.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FF5E0A32028563B0045ADB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8FF5E0A52028563B0045ADB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8FF5E0A82028563B0045ADB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8FF5E0AA2028563B0045ADB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8FF5E0AD2028563B0045ADB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8FF5E0AF2028563B0045ADB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FF5E0B42028563B0045ADB6 /* TropicanaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TropicanaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FF5E0B82028563B0045ADB6 /* TropicanaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TropicanaTests.swift; sourceTree = "<group>"; };
+		8FF5E0BA2028563B0045ADB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FF5E0BF2028563B0045ADB6 /* TropicanaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TropicanaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FF5E0C32028563B0045ADB6 /* TropicanaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TropicanaUITests.swift; sourceTree = "<group>"; };
+		8FF5E0C52028563B0045ADB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8FF5E09D2028563B0045ADB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FF5E0B12028563B0045ADB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FF5E0BC2028563B0045ADB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8FF5E0972028563A0045ADB6 = {
+			isa = PBXGroup;
+			children = (
+				8FF5E0A22028563B0045ADB6 /* Tropicana */,
+				8FF5E0B72028563B0045ADB6 /* TropicanaTests */,
+				8FF5E0C22028563B0045ADB6 /* TropicanaUITests */,
+				8FF5E0A12028563B0045ADB6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8FF5E0A12028563B0045ADB6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8FF5E0A02028563B0045ADB6 /* Tropicana.app */,
+				8FF5E0B42028563B0045ADB6 /* TropicanaTests.xctest */,
+				8FF5E0BF2028563B0045ADB6 /* TropicanaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8FF5E0A22028563B0045ADB6 /* Tropicana */ = {
+			isa = PBXGroup;
+			children = (
+				8FF5E0A32028563B0045ADB6 /* AppDelegate.swift */,
+				8FF5E0A52028563B0045ADB6 /* ViewController.swift */,
+				8FF5E0A72028563B0045ADB6 /* Main.storyboard */,
+				8FF5E0AA2028563B0045ADB6 /* Assets.xcassets */,
+				8FF5E0AC2028563B0045ADB6 /* LaunchScreen.storyboard */,
+				8FF5E0AF2028563B0045ADB6 /* Info.plist */,
+			);
+			path = Tropicana;
+			sourceTree = "<group>";
+		};
+		8FF5E0B72028563B0045ADB6 /* TropicanaTests */ = {
+			isa = PBXGroup;
+			children = (
+				8FF5E0B82028563B0045ADB6 /* TropicanaTests.swift */,
+				8FF5E0BA2028563B0045ADB6 /* Info.plist */,
+			);
+			path = TropicanaTests;
+			sourceTree = "<group>";
+		};
+		8FF5E0C22028563B0045ADB6 /* TropicanaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8FF5E0C32028563B0045ADB6 /* TropicanaUITests.swift */,
+				8FF5E0C52028563B0045ADB6 /* Info.plist */,
+			);
+			path = TropicanaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8FF5E09F2028563B0045ADB6 /* Tropicana */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FF5E0C82028563B0045ADB6 /* Build configuration list for PBXNativeTarget "Tropicana" */;
+			buildPhases = (
+				8FF5E09C2028563B0045ADB6 /* Sources */,
+				8FF5E09D2028563B0045ADB6 /* Frameworks */,
+				8FF5E09E2028563B0045ADB6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tropicana;
+			productName = Tropicana;
+			productReference = 8FF5E0A02028563B0045ADB6 /* Tropicana.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8FF5E0B32028563B0045ADB6 /* TropicanaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FF5E0CB2028563B0045ADB6 /* Build configuration list for PBXNativeTarget "TropicanaTests" */;
+			buildPhases = (
+				8FF5E0B02028563B0045ADB6 /* Sources */,
+				8FF5E0B12028563B0045ADB6 /* Frameworks */,
+				8FF5E0B22028563B0045ADB6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8FF5E0B62028563B0045ADB6 /* PBXTargetDependency */,
+			);
+			name = TropicanaTests;
+			productName = TropicanaTests;
+			productReference = 8FF5E0B42028563B0045ADB6 /* TropicanaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8FF5E0BE2028563B0045ADB6 /* TropicanaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FF5E0CE2028563B0045ADB6 /* Build configuration list for PBXNativeTarget "TropicanaUITests" */;
+			buildPhases = (
+				8FF5E0BB2028563B0045ADB6 /* Sources */,
+				8FF5E0BC2028563B0045ADB6 /* Frameworks */,
+				8FF5E0BD2028563B0045ADB6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8FF5E0C12028563B0045ADB6 /* PBXTargetDependency */,
+			);
+			name = TropicanaUITests;
+			productName = TropicanaUITests;
+			productReference = 8FF5E0BF2028563B0045ADB6 /* TropicanaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8FF5E0982028563A0045ADB6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Prashant Prajapati";
+				TargetAttributes = {
+					8FF5E09F2028563B0045ADB6 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					8FF5E0B32028563B0045ADB6 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8FF5E09F2028563B0045ADB6;
+					};
+					8FF5E0BE2028563B0045ADB6 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8FF5E09F2028563B0045ADB6;
+					};
+				};
+			};
+			buildConfigurationList = 8FF5E09B2028563B0045ADB6 /* Build configuration list for PBXProject "Tropicana" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8FF5E0972028563A0045ADB6;
+			productRefGroup = 8FF5E0A12028563B0045ADB6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8FF5E09F2028563B0045ADB6 /* Tropicana */,
+				8FF5E0B32028563B0045ADB6 /* TropicanaTests */,
+				8FF5E0BE2028563B0045ADB6 /* TropicanaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8FF5E09E2028563B0045ADB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FF5E0AE2028563B0045ADB6 /* LaunchScreen.storyboard in Resources */,
+				8FF5E0AB2028563B0045ADB6 /* Assets.xcassets in Resources */,
+				8FF5E0A92028563B0045ADB6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FF5E0B22028563B0045ADB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FF5E0BD2028563B0045ADB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8FF5E09C2028563B0045ADB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FF5E0A62028563B0045ADB6 /* ViewController.swift in Sources */,
+				8FF5E0A42028563B0045ADB6 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FF5E0B02028563B0045ADB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FF5E0B92028563B0045ADB6 /* TropicanaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FF5E0BB2028563B0045ADB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FF5E0C42028563B0045ADB6 /* TropicanaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8FF5E0B62028563B0045ADB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8FF5E09F2028563B0045ADB6 /* Tropicana */;
+			targetProxy = 8FF5E0B52028563B0045ADB6 /* PBXContainerItemProxy */;
+		};
+		8FF5E0C12028563B0045ADB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8FF5E09F2028563B0045ADB6 /* Tropicana */;
+			targetProxy = 8FF5E0C02028563B0045ADB6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8FF5E0A72028563B0045ADB6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FF5E0A82028563B0045ADB6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8FF5E0AC2028563B0045ADB6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FF5E0AD2028563B0045ADB6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8FF5E0C62028563B0045ADB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8FF5E0C72028563B0045ADB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8FF5E0C92028563B0045ADB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Tropicana/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.prashant.Tropicana;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8FF5E0CA2028563B0045ADB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Tropicana/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.prashant.Tropicana;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8FF5E0CC2028563B0045ADB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TropicanaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.prashant.TropicanaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tropicana.app/Tropicana";
+			};
+			name = Debug;
+		};
+		8FF5E0CD2028563B0045ADB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TropicanaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.prashant.TropicanaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tropicana.app/Tropicana";
+			};
+			name = Release;
+		};
+		8FF5E0CF2028563B0045ADB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TropicanaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.prashant.TropicanaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Tropicana;
+			};
+			name = Debug;
+		};
+		8FF5E0D02028563B0045ADB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TropicanaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.prashant.TropicanaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Tropicana;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8FF5E09B2028563B0045ADB6 /* Build configuration list for PBXProject "Tropicana" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FF5E0C62028563B0045ADB6 /* Debug */,
+				8FF5E0C72028563B0045ADB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FF5E0C82028563B0045ADB6 /* Build configuration list for PBXNativeTarget "Tropicana" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FF5E0C92028563B0045ADB6 /* Debug */,
+				8FF5E0CA2028563B0045ADB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FF5E0CB2028563B0045ADB6 /* Build configuration list for PBXNativeTarget "TropicanaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FF5E0CC2028563B0045ADB6 /* Debug */,
+				8FF5E0CD2028563B0045ADB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FF5E0CE2028563B0045ADB6 /* Build configuration list for PBXNativeTarget "TropicanaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FF5E0CF2028563B0045ADB6 /* Debug */,
+				8FF5E0D02028563B0045ADB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8FF5E0982028563A0045ADB6 /* Project object */;
+}
