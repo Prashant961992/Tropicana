@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  Tropicana
 //
-//  Created by Prashant Prajapati on 05/02/18.
-//  Copyright © 2018 Prashant Prajapati. All rights reserved.
+//
+//
 //
 
 import UIKit
