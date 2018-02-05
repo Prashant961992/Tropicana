@@ -2,8 +2,8 @@
 //  TropicanaViewController.swift
 //  Tropicana
 //
-//  Created by Prashant Prajapati on 05/02/18.
-//  Copyright © 2018 Prashant Prajapati. All rights reserved.
+//
+//
 //
 
 import UIKit
@@ -14,216 +14,143 @@ class TropicanaViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     let faces = [("Grape", 0.08), ("Watermelon", 0.08), ("Mango", 0.08), ("Strawberry", 0.08), ("Kiwi", 0.08), ("Lemon", 0.08), ("Apple", 0.08), ("Pear", 0.08), ("Cherry", 0.08), ("Orange", 0.08), ("Banana", 0.08), ("Mangosteen", 0.08), ("jackpot_icon", 0.04)]
     
-    //odds for combinations : 3 of the same| 2 of the same| ANY of the 3
+    // Get Odd Combination
     let odds = [0.1, 0.25, 0.65]
     
-    //Maximum Number for RNG bounds, default arc4random is 2^32
+    //Define Maximum Range
     let maxRandomRange = 4294967296
     
-    //game numbers
-    var startingMoney = 1000 // starting money
-    var jackpot = 100000 // starting jackpot
-    var betM = 0 //bet
+    // Number Connection
+    var beginningcount = 1000
+    var jackpot = 100000
+    var betM = 0
     
-    //labels outlets
+    // UILabel Connection
     @IBOutlet weak var jackPot: UILabel!
     @IBOutlet weak var wallet: UILabel!
     @IBOutlet weak var bet: UILabel!
     
-    //buttons outlets
+    //UIbutton Connection
     @IBOutlet weak var btnSpin: UIButton!
     @IBOutlet weak var btnBet: UIButton!
     @IBOutlet weak var btnReset: UIButton!
     @IBOutlet weak var btnQuit: UIButton!
     @IBOutlet weak var btnAddCash: UIButton!
     
-    //pickers outlets
-    @IBOutlet weak var row1: UIPickerView!
-    @IBOutlet weak var row2: UIPickerView!
-    @IBOutlet weak var row3: UIPickerView!
+    @IBOutlet weak var picker1: UIPickerView!
+    @IBOutlet weak var picker2: UIPickerView!
+    @IBOutlet weak var picker3: UIPickerView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        row1.selectRow(4, inComponent:0, animated:true)
-        row2.selectRow(4, inComponent:0, animated:true)
-        row3.selectRow(4, inComponent:0, animated:true)
-        startingMoney = 0
+        picker1.selectRow(4, inComponent:0, animated:true)
+        picker2.selectRow(4, inComponent:0, animated:true)
+        picker3.selectRow(4, inComponent:0, animated:true)
+        beginningcount = 0
         
         updateUI()
         
     }
     
-    //checking that the bet is not bigger than wallet amount, then spinning the rows
+    //Spin Action
     @IBAction func spin(_ sender: UIButton) {
-        //generate random reel combination out of 3 of the same| 2 of the same| ANY of the 3
-        let selectedCombination = randomSelection()
+        //get random Combination
+        let selectedCombination = randomNumber()
         
-        //Fruit Face Indexies for purpose of tracking non repating elements
+        // Gameindexes Indexies for non repating count
         var indexes = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         
         switch selectedCombination {
-        case 0: // 3 of the same
-            let fruitIndex = getRandomFruitFaceIndex()
-            row1.selectRow(fruitIndex, inComponent: 0, animated: true)
-            row2.selectRow(fruitIndex, inComponent: 0, animated: true)
-            row3.selectRow(fruitIndex, inComponent: 0, animated: true)
+        case 0:
+            // 3 Position Is Same
+            let gameIndex = getRandomFruitFaceIndex()
+            picker1.selectRow(gameIndex, inComponent: 0, animated: true)
+            picker2.selectRow(gameIndex, inComponent: 0, animated: true)
+            picker3.selectRow(gameIndex, inComponent: 0, animated: true)
             
-            //check if player won the jackpot
-            if fruitIndex == 12 {
-                startingMoney += jackpot
+            //Winner
+            if gameIndex == 12 {
+                beginningcount += jackpot
                 jackpot = 10000
             }
             else {
-                startingMoney += betM * 10
+                beginningcount += betM * 10
             }
-        case 1: // 2 of the same
             
-            //generation position where on the reel 2 of the same fruit should go
+            let alert = UIAlertController(title: "Winner", message: "You Won the Games", preferredStyle: .alert)
+            
+            let printSomething = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default) { _ in
+                print("We can run a block of code." )
+            }
+            
+            alert.addAction(printSomething)
+            
+            self.present(alert, animated: true, completion: nil)
+            
+        case 1:
+            
+            //2 Position Is Same
             let position = Int(arc4random_uniform(3))
-            var fruitIndex = getRandomFruitFaceIndex()
+            var gameIndex = getRandomFruitFaceIndex()
             switch position {
             case 0: //Position: FRUIT FRUIT ANY
-                row1.selectRow(fruitIndex, inComponent: 0, animated: true)
-                row2.selectRow(fruitIndex, inComponent: 0, animated: true)
+                picker1.selectRow(gameIndex, inComponent: 0, animated: true)
+                picker2.selectRow(gameIndex, inComponent: 0, animated: true)
                 
-                indexes.remove(at: indexes.index(of: fruitIndex)!)
+                indexes.remove(at: indexes.index(of: gameIndex)!)
                 
-                fruitIndex = getRandomNonRepeatingFruitFaceIndex(indexies: indexes)
-                row3.selectRow(fruitIndex, inComponent: 0, animated: true)
+                gameIndex = getRandomNonRepeatingGamesIndex(indexies: indexes)
+                picker3.selectRow(gameIndex, inComponent: 0, animated: true)
             case 1: //Position FRUIT ANY FRUIT
-                row1.selectRow(fruitIndex, inComponent: 0, animated: true)
-                row3.selectRow(fruitIndex, inComponent: 0, animated: true)
+                picker1.selectRow(gameIndex, inComponent: 0, animated: true)
+                picker3.selectRow(gameIndex, inComponent: 0, animated: true)
                 
-                indexes.remove(at: indexes.index(of: fruitIndex)!)
+                indexes.remove(at: indexes.index(of: gameIndex)!)
                 
-                fruitIndex = getRandomNonRepeatingFruitFaceIndex(indexies: indexes)
-                row2.selectRow(fruitIndex, inComponent: 0, animated: true)
-            case 2: //Position ANY FRUIT FRUIT
-                row2.selectRow(fruitIndex, inComponent: 0, animated: true)
-                row3.selectRow(fruitIndex, inComponent: 0, animated: true)
+                gameIndex = getRandomNonRepeatingGamesIndex(indexies: indexes)
+                picker2.selectRow(gameIndex, inComponent: 0, animated: true)
+            case 2:
                 
-                indexes.remove(at: indexes.index(of: fruitIndex)!)
+                //Position any
+                picker2.selectRow(gameIndex, inComponent: 0, animated: true)
+                picker3.selectRow(gameIndex, inComponent: 0, animated: true)
                 
-                fruitIndex = getRandomNonRepeatingFruitFaceIndex(indexies: indexes)
-                row1.selectRow(fruitIndex, inComponent: 0, animated: true)
+                indexes.remove(at: indexes.index(of: gameIndex)!)
+                
+                gameIndex = getRandomNonRepeatingGamesIndex(indexies: indexes)
+                picker1.selectRow(gameIndex, inComponent: 0, animated: true)
             default: break
             }
             
-            //player's winnings
-            startingMoney += betM
+            //Winner
+            beginningcount += betM
         case 2: // 3 of Any
             
             //reel 1
-            var fruitIndex = getRandomFruitFaceIndex()
-            row1.selectRow(fruitIndex, inComponent: 0, animated: true)
-            indexes.remove(at: indexes.index(of: fruitIndex)!)
+            var gameIndex = getRandomFruitFaceIndex()
+            picker1.selectRow(gameIndex, inComponent: 0, animated: true)
+            indexes.remove(at: indexes.index(of: gameIndex)!)
             //reel 2
-            fruitIndex = getRandomNonRepeatingFruitFaceIndex(indexies: indexes)
-            row2.selectRow(fruitIndex, inComponent: 0, animated: true)
-            indexes.remove(at: indexes.index(of: fruitIndex)!)
+            gameIndex = getRandomNonRepeatingGamesIndex(indexies: indexes)
+            picker2.selectRow(gameIndex, inComponent: 0, animated: true)
+            indexes.remove(at: indexes.index(of: gameIndex)!)
             //reel 3
-            fruitIndex = getRandomNonRepeatingFruitFaceIndex(indexies: indexes)
-            row3.selectRow(fruitIndex, inComponent: 0, animated: true)
+            gameIndex = getRandomNonRepeatingGamesIndex(indexies: indexes)
+            picker3.selectRow(gameIndex, inComponent: 0, animated: true)
             
-            //Increse jackpot if player loses
+            //Increse Count if player loses
             jackpot += betM * 2
             
         default:
             break
         }
         
-        //update UI to reflect current game state
+        //update Games
         updateUI()
     }
     
-    //increasing basic bet (5$) with step in 5$. Example: 5->10->15...
-    @IBAction func bet(_ sender: UIButton) {
-//        if (startingMoney >= 5 )  {
-            betM = 5
-            startingMoney = 5
-            btnSpin.isEnabled = true
-            btnBet.isEnabled = true //startingMoney < 5 ? false : true
-//        }
-        wallet.text = String (startingMoney)
-        bet.text = String (betM)
-    }
     
-    @IBAction func bet5(_ sender: UIButton) {
-//        if (startingMoney >= 5 )  {
-            betM = 5
-            startingMoney = 5
-            btnSpin.isEnabled = true
-            btnBet.isEnabled = true //startingMoney < 5 ? false : true
-//        }
-        wallet.text = String (startingMoney)
-        bet.text = String (betM)
-    }
-    
-    @IBAction func bet10(_ sender: UIButton) {
-//        if (startingMoney >= 5 )  {
-            betM = 10
-            startingMoney = 10
-            btnSpin.isEnabled = true
-            btnBet.isEnabled = true //< 5 ? false : true
-//        }
-        wallet.text = String (startingMoney)
-        bet.text = String (betM)
-    }
-    
-    @IBAction func bet20(_ sender: UIButton) {
-        //        if (startingMoney >= 5 )  {
-        betM = 20
-        startingMoney = 20
-        btnSpin.isEnabled = true
-        btnBet.isEnabled = true //< 5 ? false : true
-        //        }
-        wallet.text = String (startingMoney)
-        bet.text = String (betM)
-    }
-    
-    @IBAction func bet25(_ sender: UIButton) {
-        //        if (startingMoney >= 5 )  {
-        betM = 25
-        startingMoney = 25
-        btnSpin.isEnabled = true
-        btnBet.isEnabled = true //startingMoney < 5 ? false : true
-        //        }
-        wallet.text = String (startingMoney)
-        bet.text = String (betM)
-    }
-    
-    @IBAction func bet50(_ sender: UIButton) {
-        //        if (startingMoney >= 5 )  {
-        betM = 50
-        startingMoney = 50
-        btnSpin.isEnabled = true
-        btnBet.isEnabled = true //startingMoney < 5 ? false : true
-        //        }
-        wallet.text = String (startingMoney)
-        bet.text = String (betM)
-    }
-    
-    //reseting user's wallet to starting amount (500$)
-    @IBAction func reset(_ sender: UIButton) {
-        startingMoney = 0
-        jackpot = 100000
-        updateUI()
-    }
-    
-    //putting app to the background
-    @IBAction func quit(_ sender: UIButton) {
-        //suspending application to background
-        UIControl().sendAction(#selector(NSXPCConnection.suspend),
-                               to: UIApplication.shared, for: nil)
-    }
-    
-    //adding cash to the user wallet
-    @IBAction func addCash(_ sender: UIButton) {
-        startingMoney += 1000
-        btnBet.isEnabled = true
-        wallet.text = String (startingMoney)
-    }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -241,15 +168,14 @@ class TropicanaViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         return ((images[0]?.size.height)! + 15)
     }
     
-    //________ CUTSOM FUNC SEC ______
-    //Update UI Labels and Reset Bet
+    //Update Data Reset Count
     func updateUI() {
         jackPot.text = String (jackpot)
-        wallet.text = String (startingMoney)
+        wallet.text = String (beginningcount)
         betM = 0
         bet.text = String (betM)
         btnSpin.isEnabled = false
-        btnBet.isEnabled = true //startingMoney < 5 ? false : true
+        btnBet.isEnabled = true //beginningcount < 5 ? false : true
     }
     
     //get RandomNumber
@@ -260,7 +186,7 @@ class TropicanaViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     //Randomly select combination for the reel using given odds
-    func randomSelection() -> Int{
+    func randomNumber() -> Int{
         let randomNumber = getRandomNumber()
         var cWeight:Double  = 0
         
@@ -290,7 +216,7 @@ class TropicanaViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     //Generate Non Reapitng Fruit Faces Index from avaliable collection of indexes
-    func getRandomNonRepeatingFruitFaceIndex(indexies: [Int]) -> Int {
+    func getRandomNonRepeatingGamesIndex(indexies: [Int]) -> Int {
         var randomIndex = -1
         
         repeat {
@@ -298,6 +224,65 @@ class TropicanaViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         } while (!indexies.contains(randomIndex))
         
         return randomIndex
+    }
+    
+    //increasing
+    @IBAction func bet(_ sender: UIButton) {
+        betM = 5
+        beginningcount = 5
+        btnSpin.isEnabled = true
+        btnBet.isEnabled = true
+        
+        wallet.text = String (beginningcount)
+        bet.text = String (betM)
+    }
+    
+    @IBAction func bet10(_ sender: UIButton) {
+        betM = 10
+        beginningcount = 10
+        btnSpin.isEnabled = true
+        btnBet.isEnabled = true
+        wallet.text = String (beginningcount)
+        bet.text = String (betM)
+    }
+    
+    @IBAction func bet20(_ sender: UIButton) {
+        betM = 20
+        beginningcount = 20
+        btnSpin.isEnabled = true
+        btnBet.isEnabled = true
+        wallet.text = String (beginningcount)
+        bet.text = String (betM)
+    }
+    
+    @IBAction func bet50(_ sender: UIButton) {
+        betM = 50
+        beginningcount = 50
+        btnSpin.isEnabled = true
+        btnBet.isEnabled = true
+        wallet.text = String (beginningcount)
+        bet.text = String (betM)
+    }
+    
+    @IBAction func bet100(_ sender: UIButton) {
+        betM = 100
+        beginningcount = 100
+        btnSpin.isEnabled = true
+        btnBet.isEnabled = true
+        wallet.text = String (beginningcount)
+        bet.text = String (betM)
+    }
+    
+    @IBAction func reset(_ sender: UIButton) {
+        // Reset Count
+        beginningcount = 0
+        jackpot = 100000
+        updateUI()
+    }
+    
+    @IBAction func quit(_ sender: UIButton) {
+        // App ShutDown
+        exit(0)
     }
     
 }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -165,31 +165,28 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecu-cQ-Fe3">
                                                 <rect key="frame" x="184.5" y="5" width="48" height="39"/>
-                                                <color key="backgroundColor" red="0.90588235289999997" green="0.33333333329999998" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="$25">
+                                                <state key="normal" backgroundImage="$50">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="bet25:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EOB-TR-xsQ"/>
+                                                    <action selector="bet50:" destination="BYZ-38-t0r" eventType="touchUpInside" id="abV-xO-Mos"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oho-7q-QOE">
                                                 <rect key="frame" x="242.5" y="5" width="47.5" height="39"/>
-                                                <color key="backgroundColor" red="0.90588235289999997" green="0.33333333329999998" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="$50">
+                                                <state key="normal" backgroundImage="$100">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="bet50:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TIt-HT-OcO"/>
+                                                    <action selector="bet100:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LEm-Nb-Vi8"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQZ-Iv-uDO">
                                                 <rect key="frame" x="67.5" y="5" width="48" height="39"/>
-                                                <color key="backgroundColor" red="0.90588235289999997" green="0.33333333329999998" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="$10">
+                                                <state key="normal" backgroundImage="$10">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -198,9 +195,8 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpQ-95-mdh">
                                                 <rect key="frame" x="125.5" y="5" width="47" height="39"/>
-                                                <color key="backgroundColor" red="0.90588235289999997" green="0.33333333329999998" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="$20">
+                                                <state key="normal" backgroundImage="$20">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -209,9 +205,8 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IYb-Zd-iUb">
                                                 <rect key="frame" x="10" y="5" width="47.5" height="39"/>
-                                                <color key="backgroundColor" red="0.90588235289999997" green="0.33333333329999998" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="$5">
+                                                <state key="normal" backgroundImage="$5">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -328,9 +323,9 @@
                         <outlet property="btnReset" destination="dPJ-Wm-tHg" id="bhH-my-jxC"/>
                         <outlet property="btnSpin" destination="v7R-Mc-IQW" id="H7n-5E-bxM"/>
                         <outlet property="jackPot" destination="jEb-oB-4X2" id="3io-az-20T"/>
-                        <outlet property="row1" destination="Frp-Bc-VO7" id="UJL-Va-xIT"/>
-                        <outlet property="row2" destination="BOi-9u-sJ6" id="Lcc-Yp-5W4"/>
-                        <outlet property="row3" destination="B6H-Da-8oX" id="rBN-dp-MxH"/>
+                        <outlet property="picker1" destination="Frp-Bc-VO7" id="ADB-p6-hzk"/>
+                        <outlet property="picker2" destination="BOi-9u-sJ6" id="TcC-2r-bMi"/>
+                        <outlet property="picker3" destination="B6H-Da-8oX" id="C0G-Dy-U4l"/>
                         <outlet property="wallet" destination="oCQ-nL-76x" id="DbI-dp-Eo9"/>
                     </connections>
                 </viewController>
@@ -340,6 +335,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="$10" width="70" height="53"/>
+        <image name="$100" width="70" height="53"/>
+        <image name="$20" width="70" height="53"/>
+        <image name="$5" width="70" height="53"/>
+        <image name="$50" width="70" height="53"/>
         <image name="Background" width="310" height="359"/>
         <image name="btnQuit" width="200" height="51"/>
         <image name="btnReset" width="89" height="90"/>
