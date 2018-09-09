@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Grape.png",
+      "filename" : "crown.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Grape@2x.png",
+      "filename" : "crown-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Grape@3x.png",
+      "filename" : "crown-2.png",
       "scale" : "3x"
     }
   ],
