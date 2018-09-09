@@ -1,25 +1,15 @@
+//  Assignment 1 - Slot Machine
 //
-//  TropicanaViewController.swift
-//  Tropicana
-//
-//
-//
-//
+//  Harsh Mehta - 300951815
+//  Shivam Shah - 300877523
 
 import UIKit
 
 class TropicanaViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
-//    var images = [UIImage(named: "basketball"), UIImage(named: "baseball"), UIImage(named: "footmall"), UIImage(named: "seasonball"), UIImage(named: "tennisball"),UIImage(named: "winner")]
-//    //, UIImage(named: "Lemon"), UIImage(named: "Apple"), UIImage(named: "Pear"), UIImage(named: "Cherry"), UIImage(named: "Orange"), UIImage(named: "Banana"), UIImage(named: "Mangosteen"), UIImage(named: "jackpot_icon")
-//    let faces = [("basketball", 0.08), ("baseball", 0.08), ("footmall", 0.08), ("seasonball", 0.08), ("tennisball", 0.08),("winner", 0.04)]
-//    //, ("Lemon", 0.08), ("Apple", 0.08), ("Pear", 0.08), ("Cherry", 0.08), ("Orange", 0.08), ("Banana", 0.08), ("Mangosteen", 0.08), ("jackpot_icon", 0.04)
-    
-    var images = [UIImage(named: "Grape"), UIImage(named: "Watermelon"), UIImage(named: "Mango"), UIImage(named: "Strawberry"), UIImage(named: "Kiwi"), UIImage(named: "Lemon"), UIImage(named: "Apple"), UIImage(named: "Pear"), UIImage(named: "Cherry"), UIImage(named: "Orange"), UIImage(named: "Banana"), UIImage(named: "Mangosteen"), UIImage(named: "jackpot_icon")]
-    
-    //fruit faces and odds
-    let faces = [("Grape", 0.08), ("Watermelon", 0.08), ("Mango", 0.08), ("Strawberry", 0.08), ("Kiwi", 0.08), ("Lemon", 0.08), ("Apple", 0.08), ("Pear", 0.08), ("Cherry", 0.08), ("Orange", 0.08), ("Banana", 0.08), ("Mangosteen", 0.08), ("jackpot_icon", 0.04)]
-    
+    var images = [UIImage(named: "basketball"), UIImage(named: "baseball"), UIImage(named: "footmall"), UIImage(named: "seasonball"), UIImage(named: "tennisball"),UIImage(named: "baseball1"),UIImage(named: "stump"), UIImage(named: "hockeystick"), UIImage(named: "cricketstadium"), UIImage(named: "clothescricket"), UIImage(named: "basketballbaket"), UIImage(named: "crown"),UIImage(named: "winner")]
+    let sportimages = [("basketball", 0.08), ("baseball", 0.08), ("footmall", 0.08), ("seasonball", 0.08), ("tennisball", 0.08),("baseball1",0.08),("stump", 0.08), ("hockeystick", 0.08), ("cricketstadium", 0.08), ("clothescricket", 0.08), ("basketballbaket", 0.08), ("crown", 0.08),("winner", 0.04)]
+ 
     // Get Odd Combination
     let odds = [0.1, 0.25, 0.65]
     
@@ -207,12 +197,12 @@ class TropicanaViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         return -1
     }
     
-    //Randomly select fruit face index using given odds
+    //select Index randomely
     func getRandomFruitFaceIndex() -> Int {
         let randomNumber = getRandomNumber()
         var cWeight:Double = 0
         
-        for (i, element) in faces.enumerated() {
+        for (i, element) in sportimages.enumerated() {
             cWeight += element.1
             if (randomNumber < Int(cWeight * Double(maxRandomRange))) {
                 return i
@@ -222,7 +212,7 @@ class TropicanaViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         return -1
     }
     
-    //Generate Non Reapitng Fruit Faces Index from avaliable collection of indexes
+    //Generate Non Reapitng Fruit sportimages Index from avaliable collection of indexes
     func getRandomNonRepeatingGamesIndex(indexies: [Int]) -> Int {
         var randomIndex = -1
         
